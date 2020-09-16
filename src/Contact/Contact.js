@@ -9,6 +9,7 @@ state ={
 // attempt at clearing input fields
 joinText = ()=>{
         alert(`Thank You ${this.state.firstName}`);
+        window.location.reload(false);
         // this.setState ({
         //     firstName: null,
         //     lastName: null,
