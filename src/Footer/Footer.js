@@ -4,9 +4,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div>
-        <p>© React Actors </p>
-      </div>
+      <footer>© React Actors</footer>
     );
   }
 
