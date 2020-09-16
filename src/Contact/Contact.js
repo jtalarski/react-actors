@@ -6,9 +6,9 @@ state ={
     lastName: null,
     bestImpression: null,
 }
-
+// attempt at clearing input fields
     JoinText = ()=>{
-        alert(`Thank You ${this.state.firstName}`)
+        alert(`Thank You ${this.state.firstName}`);
     }
 onFirstNameChange = (event) => {
     console.log('event.target', event.target);
