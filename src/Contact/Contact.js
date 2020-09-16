@@ -7,9 +7,19 @@ state ={
     bestImpression: null,
 }
 // attempt at clearing input fields
-    JoinText = ()=>{
+joinText = ()=>{
         alert(`Thank You ${this.state.firstName}`);
+        // this.setState ({
+        //     firstName: null,
+        //     lastName: null,
+        //     bestImpression: null
+        // })
     }
+
+clearInput = ()=>
+    console.log('Did this work?')
+
+
 onFirstNameChange = (event) => {
     console.log('event.target', event.target);
     console.log('event.target.value', event.target.value);
@@ -50,8 +60,11 @@ handleReset = () => {
 
 let submissionText;
 if(this.state.firstName != null && this.state.lastName != null && this.state.bestImpression != null ){
-    submissionText = `${this.state.firstName} ${this.state.lastName}'s best impression is ${this.state.bestImpression}`
-};
+    submissionText = `${this.state.firstName} ${this.state.lastName}'s best impression is ${this.state.bestImpression}`;
+} else {
+    submissionText = ""
+}
+
 
     return (
       <div>
@@ -59,7 +72,7 @@ if(this.state.firstName != null && this.state.lastName != null && this.state.bes
         <input type="text" placeholder="First Name" onChange={this.onFirstNameChange} />
         <input type="text" placeholder="last Name" onChange={this.onLastNameChange} />
         <input type="text" placeholder="Best Impression" onChange={this.onImpressionChange} />
-        <button onClick={this.JoinText}>Join Us!</button>
+        <button onClick={this.joinText}>Join Us!</button>
         <p> {submissionText} </p>
         <p>Phone: 1-800-We-React</p>
         <p>Email: info@ReactActors.com</p>
